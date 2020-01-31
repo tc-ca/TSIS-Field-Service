@@ -1,0 +1,1 @@
+﻿tc_tcinspection;My Inspections;<extra><views>tc_tcinspection.*:tc_tcinspection.@All Inspections</views><actions>0;0;1</actions></extra>,contact,account,@Tourplan;Today's Agenda;CalendarForm,@RoutePlan;;My Route,@Map;;MapForm,annotation;Reports;<extra><views>annotation.@Reports</views><actions>224;0;4</actions></extra>,@Setup

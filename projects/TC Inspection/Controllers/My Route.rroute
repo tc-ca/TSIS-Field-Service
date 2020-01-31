@@ -1,0 +1,9 @@
+﻿<RoutePlan>
+  <ActivityName>contact</ActivityName>
+  <StartDateField>createdon</StartDateField>
+  <EndDateField>modifiedon</EndDateField>
+  <DefaultAction>1</DefaultAction>
+  <LookupField>parentcustomerid</LookupField>
+  <EnabledWorkflows>OnRouteItemAdded OnRouteItemCompleted</EnabledWorkflows>
+  <CustomCompletionField>statuscode</CustomCompletionField>
+</RoutePlan>

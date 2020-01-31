@@ -1,0 +1,19 @@
+﻿<GlobalMap>
+  <Items>
+    <GlobalMapComponent>
+      <EntityName>tc_tcinspection</EntityName>
+      <ViewName>Assigned to me</ViewName>
+      <IsInitial>true</IsInitial>
+    </GlobalMapComponent>
+    <GlobalMapComponent>
+      <EntityName>tc_tcinspection</EntityName>
+      <ViewName>Assigned to someone else</ViewName>
+    </GlobalMapComponent>
+  </Items>
+  <Setup>
+    <Latitude>45.4215</Latitude>
+    <Longitude>-75.6972</Longitude>
+    <Zoom>7</Zoom>
+    <AggregatePins>true</AggregatePins>
+  </Setup>
+</GlobalMap>

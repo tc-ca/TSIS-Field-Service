@@ -1,0 +1,63 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>tc_tcinspection</EntityName>
+    <CamelCase>tc_tcinspection</CamelCase>
+  </Attributes>
+  <Name>Assigned to me</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>tc_name</OrderBy>
+  <SerializedBindings>
+    <string>tc_name</string>
+    <string>tc_inspectiondate</string>
+    <string>tc_tcinspectionid</string>
+    <string>tc_facility.tc_organizationfacility.tc_latitude</string>
+    <string>tc_facility.tc_organizationfacility.tc_longitude</string>
+    <string>tc_inspectiontypeid.tc_inpsecitontype.tc_name</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="tc_tcinspection">
+      <filter type="and">
+        <condition attribute="tc_avsecusername" operator="like" value="Kevin%"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="tc_name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="Controls.pinGreen.png">
+          <IsConstant>true</IsConstant>
+          <StyleName>ImageCellStyle</StyleName>
+          <Bounds>0,0,100,20</Bounds>
+          <CellKind>2</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="tc_inspectiondate">
+          <StyleName>secondary / date</StyleName>
+          <Bounds>158,28,154,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="tc_inspectiontypeid.tc_inpsecitontype.tc_name">
+          <StyleName>secondary / date</StyleName>
+          <Bounds>10,28,131,18</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

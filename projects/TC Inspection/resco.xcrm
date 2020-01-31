@@ -1,0 +1,738 @@
+﻿<model version="7" publish="24">
+  <entities>
+    <entity schema="account">
+      <properties>
+        <property schema="tc_regulatedpartytype"/>
+        <property schema="address1_name" disabled="1"/>
+        <property schema="address2_addresstypecode" disabled="1"/>
+        <property schema="address2_latitude" disabled="1"/>
+        <property schema="address2_longitude" disabled="1"/>
+        <property schema="defaultpricelevelid" disabled="1"/>
+        <property schema="msdyn_billingaccount" disabled="1"/>
+        <property schema="msdyn_salestaxcode" disabled="1"/>
+        <property schema="msdyn_serviceterritory" disabled="1"/>
+        <property schema="msdyn_taxexempt" disabled="1"/>
+        <property schema="msdyn_workorderinstructions" disabled="1"/>
+        <property schema="preferredequipmentid" disabled="1"/>
+      </properties>
+      <indexes>
+        <index schema="idx_account_transactioncurrencyid" issystem="true">
+          <fields>
+            <field schema="transactioncurrencyid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_account_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="activityparty">
+      <properties>
+        <property schema="activityid"/>
+        <property schema="activitypartyid"/>
+        <property schema="addressused"/>
+        <property schema="participationtypemask"/>
+        <property schema="partyid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_activityparty_partyid" issystem="true">
+          <fields>
+            <field schema="partyid"/>
+          </fields>
+        </index>
+        <index schema="idx_activityparty_activityid" issystem="true">
+          <fields>
+            <field schema="activityid"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="appointment">
+      <properties>
+        <property schema="activitytypecode"/>
+      </properties>
+      <indexes>
+        <index schema="idx_appointment_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
+          </fields>
+        </index>
+        <index schema="idx_appointment_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_appointment_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
+        <index schema="idx_appointment_scheduledend" issystem="true">
+          <fields>
+            <field schema="scheduledend"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="contact">
+      <properties>
+        <property schema="entityimage"/>
+      </properties>
+      <indexes>
+        <index schema="idx_contact_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_contact_parentcustomerid" issystem="true">
+          <fields>
+            <field schema="parentcustomerid"/>
+          </fields>
+        </index>
+        <index schema="idx_contact_fullname" issystem="true">
+          <fields>
+            <field schema="fullname"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="equipment">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="equipmentid"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+      </properties>
+      <indexes>
+        <index schema="idx_equipment_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="resco_devicecontrol">
+      <properties>
+        <property schema="createdby"/>
+        <property schema="createdon"/>
+        <property schema="createdonbehalfby"/>
+        <property schema="importsequencenumber"/>
+        <property schema="modifiedby"/>
+        <property schema="modifiedon"/>
+        <property schema="modifiedonbehalfby"/>
+        <property schema="overriddencreatedon"/>
+        <property schema="ownerid"/>
+        <property schema="owningbusinessunit"/>
+        <property schema="owningteam"/>
+        <property schema="owninguser"/>
+        <property schema="resco_devicecontrolid"/>
+        <property schema="resco_deviceid"/>
+        <property schema="resco_entityname"/>
+        <property schema="resco_mobiledeviceid"/>
+        <property schema="resco_recordid"/>
+        <property schema="resco_requestdata"/>
+        <property schema="resco_requesttype"/>
+        <property schema="resco_responsecode"/>
+        <property schema="resco_responsedata"/>
+        <property schema="resco_responsedata1"/>
+        <property schema="resco_responsedata2"/>
+        <property schema="resco_responsedata3"/>
+        <property schema="resco_responsedata4"/>
+        <property schema="resco_responsedata5"/>
+        <property schema="resco_responsedata6"/>
+        <property schema="resco_responsedata7"/>
+        <property schema="resco_responsedata8"/>
+        <property schema="resco_responsedata9"/>
+        <property schema="resco_responsedatalength"/>
+        <property schema="resco_responsestatus"/>
+        <property schema="statecode"/>
+        <property schema="statuscode"/>
+        <property schema="timezoneruleversionnumber"/>
+        <property schema="utcconversiontimezonecode"/>
+        <property schema="versionnumber"/>
+      </properties>
+      <indexes>
+        <index schema="idx_resco_devicecontrol_owninguser" issystem="true">
+          <fields>
+            <field schema="owninguser"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_createdonbehalfby" issystem="true">
+          <fields>
+            <field schema="createdonbehalfby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_resco_mobiledeviceid" issystem="true">
+          <fields>
+            <field schema="resco_mobiledeviceid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owningbusinessunit" issystem="true">
+          <fields>
+            <field schema="owningbusinessunit"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_owningteam" issystem="true">
+          <fields>
+            <field schema="owningteam"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_modifiedby" issystem="true">
+          <fields>
+            <field schema="modifiedby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_createdby" issystem="true">
+          <fields>
+            <field schema="createdby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_modifiedonbehalfby" issystem="true">
+          <fields>
+            <field schema="modifiedonbehalfby"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_resco_devicecontrol_resco_deviceid" issystem="true">
+          <fields>
+            <field schema="resco_deviceid"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="task">
+      <properties>
+        <property schema="activitytypecode"/>
+      </properties>
+      <indexes>
+        <index schema="idx_task_regardingobjectid" issystem="true">
+          <fields>
+            <field schema="regardingobjectid"/>
+          </fields>
+        </index>
+        <index schema="idx_task_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_task_subject" issystem="true">
+          <fields>
+            <field schema="subject"/>
+          </fields>
+        </index>
+        <index schema="idx_task_scheduledend" issystem="true">
+          <fields>
+            <field schema="scheduledend"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_aircraft">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_aircraftid"/>
+        <property schema="tc_aircraftowner"/>
+        <property schema="tc_manufacturer"/>
+        <property schema="tc_mark"/>
+        <property schema="tc_model"/>
+        <property schema="tc_operator"/>
+        <property schema="tc_typedesignator"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_aircraft_tc_operator" issystem="true">
+          <fields>
+            <field schema="tc_operator"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_aircraft_tc_aircraftowner" issystem="true">
+          <fields>
+            <field schema="tc_aircraftowner"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_aircraft_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_aircraft_tc_mark" issystem="true">
+          <fields>
+            <field schema="tc_mark"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_avsecregion">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_avsecregionid"/>
+        <property schema="tc_region"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_avsecregion_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_avsecregion_tc_region" issystem="true">
+          <fields>
+            <field schema="tc_region"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_avsecuser">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_avsecuserid"/>
+        <property schema="tc_name"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_avsecuser_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_avsecuser_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_facility">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_address1latitude"/>
+        <property schema="tc_address1longitude"/>
+        <property schema="tc_facilityid"/>
+        <property schema="tc_name"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_facility_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_facility_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_inpsecitontype">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_inpsecitontypeid"/>
+        <property schema="tc_name"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_inpsecitontype_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_inpsecitontype_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_location">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_facilityid"/>
+        <property schema="tc_locationid"/>
+        <property schema="tc_name"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_location_tc_facilityid" issystem="true">
+          <fields>
+            <field schema="tc_facilityid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_location_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_location_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_organizationfacility">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_facility"/>
+        <property schema="tc_latitude"/>
+        <property schema="tc_longitude"/>
+        <property schema="tc_name"/>
+        <property schema="tc_organizationfacilityid"/>
+        <property schema="tc_organizationid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_organizationfacility_tc_organizationid" issystem="true">
+          <fields>
+            <field schema="tc_organizationid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_organizationfacility_tc_facility" issystem="true">
+          <fields>
+            <field schema="tc_facility"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_organizationfacility_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_organizationfacility_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_questionnaire">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_englishtitle"/>
+        <property schema="tc_frenchtitle"/>
+        <property schema="tc_iscompleted"/>
+        <property schema="tc_istemplate"/>
+        <property schema="tc_jsoncontent"/>
+        <property schema="tc_name"/>
+        <property schema="tc_questionnaireid"/>
+        <property schema="tc_tcquestionnaire"/>
+        <property schema="tc_userinput"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_questionnaire_tc_tcquestionnaire" issystem="true">
+          <fields>
+            <field schema="tc_tcquestionnaire"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_questionnaire_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_questionnaire_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="tc_tcinspection">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="ownerid"/>
+        <property schema="tc_aircraftid"/>
+        <property schema="tc_avsecregion"/>
+        <property schema="tc_avsecuser"/>
+        <property schema="tc_businessunit"/>
+        <property schema="tc_facility"/>
+        <property schema="tc_inspectiondate"/>
+        <property schema="tc_inspectiontypeid"/>
+        <property schema="tc_location"/>
+        <property schema="tc_name"/>
+        <property schema="tc_oversightactivitytype"/>
+        <property schema="tc_oversightrationale"/>
+        <property schema="tc_oversightstatus"/>
+        <property schema="tc_questionnaire"/>
+        <property schema="tc_stakeholder"/>
+        <property schema="tc_tcinspectionid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_tc_tcinspection_tc_avsecregion" issystem="true">
+          <fields>
+            <field schema="tc_avsecregion"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_questionnaire" issystem="true">
+          <fields>
+            <field schema="tc_questionnaire"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_stakeholder" issystem="true">
+          <fields>
+            <field schema="tc_stakeholder"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_facility" issystem="true">
+          <fields>
+            <field schema="tc_facility"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_ownerid" issystem="true">
+          <fields>
+            <field schema="ownerid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_aircraftid" issystem="true">
+          <fields>
+            <field schema="tc_aircraftid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_avsecuser" issystem="true">
+          <fields>
+            <field schema="tc_avsecuser"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_location" issystem="true">
+          <fields>
+            <field schema="tc_location"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_inspectiontypeid" issystem="true">
+          <fields>
+            <field schema="tc_inspectiontypeid"/>
+          </fields>
+        </index>
+        <index schema="idx_tc_tcinspection_tc_name" issystem="true">
+          <fields>
+            <field schema="tc_name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="team">
+      <properties>
+        <property schema="createdon"/>
+        <property schema="modifiedon"/>
+        <property schema="name"/>
+        <property schema="teamid"/>
+      </properties>
+      <indexes>
+        <index schema="idx_team_name" issystem="true">
+          <fields>
+            <field schema="name"/>
+          </fields>
+        </index>
+      </indexes>
+    </entity>
+    <entity schema="bookableresource" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="bookableresourcebooking" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="bookableresourcecategory" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="bookableresourcecharacteristic" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="bookingstatus" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="businessunit" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="campaign" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="characteristic" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="connection" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="connectionrole" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="discount" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="discounttype" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="email" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="incident" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="invoice" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="invoicedetail" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_3dmodel" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_bookingsetupmetadata" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_bookingtimestamp" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_customerasset" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_fieldservicepricelistitem" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_incidenttype" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotalert" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotdevice" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotdevicecategory" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotdevicecategorycommands" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotdevicecommand" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_iotdevicecommanddefinition" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_priority" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_productinventory" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_resourcepaytype" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_servicetasktype" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_shipvia" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_taxcode" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_taxcodedetail" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_timeoffrequest" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_warehouse" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workorder" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workorderincident" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workorderproduct" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workorderservice" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workorderservicetask" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workordersubstatus" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="msdyn_workordertype" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="phonecall" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="pricelevel" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="product" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="productpricelevel" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="quote" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="quotedetail" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="role" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="service" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="serviceappointment" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="serviceendpoint" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="site" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="territory" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="uom" disabled="1">
+      <properties/>
+    </entity>
+    <entity schema="uomschedule" disabled="1">
+      <properties/>
+    </entity>
+  </entities>
+  <home>@Dashboard;;Performance Dashboard</home>
+  <home>account</home>
+  <home>contact</home>
+  <home>bookableresourcebooking;;&lt;extra&gt;&lt;views&gt;bookableresourcebooking.*:bookableresourcebooking.@Bookings&lt;/views&gt;&lt;actions&gt;3;;1&lt;/actions&gt;&lt;/extra&gt;</home>
+  <home>msdyn_workorder;;msdyn_workorder.Default</home>
+  <home>product</home>
+  <home>msdyn_customerasset</home>
+  <home>msdyn_iotalert</home>
+  <home>msdyn_iotdevice</home>
+  <home>msdyn_timeoffrequest</home>
+  <home>@activity</home>
+  <home>@@ScanCustomerAsset;file://CustomerAsset/ScanCustomerAsset.html</home>
+  <home>@Map;;Map</home>
+  <home>@Setup</home>
+  <home>@About</home>
+  <home>@@Feedback;</home>
+</model>
